@@ -11,4 +11,10 @@ string ReadData()
     return Console.ReadLine() ?? "0";
 }
 
+// Метод выводит данные на печать
+void PrintData(string res)
+{
+    Console.WriteLine(res);
+}
+
 // ___________ Тело программы ______________
