@@ -5,10 +5,10 @@
 
 // ___________ Тело программы ______________
 
-int countChar = 3;                              
-PrintData("Введите массив строк через пробел:");
+int countChar = 3;                               // Количество символов, допустимых в строке нового массива
+PrintData("Введите массив строк (через пробел):");
 string str = ReadData();
-string[] array = Solution(str.Split(' '));
+string[] array = SelectiveExtraction(str.Split(' '));       // Формирование нового массива с ограничением по кол-ву символов через пробел
 PrintData("Mассив строк, длина которых меньше либо равнa 3 символа:");
 PrintArray(array);
 
@@ -55,13 +55,13 @@ string[] AddToArray(string[] arr, string item)
 }
 
 // Метод из имеющегося массива строк формирует массив строк, длина которых меньше либо равнa 3 символа.
-string[] Solution(string[] arr)
+string[] SelectiveExtraction(string[] arr)
 {
     string[] arrNew = new string[0];
 
     for (int i = 0; i < arr.Length; i++)
     {
-        if (string.IsNullOrEmpty(arr[i]))
+        if (string.IsNullOrEmpty(arr[i])) // Проверка, является ли значение null или пустым
             continue;
         if (arr[i].Length - 1 < countChar) arrNew = AddToArray(arrNew, arr[i]);
 
