@@ -45,4 +45,19 @@ string[] AddToArray(string[] arr, string item)
     return arrResult;
 }
 
+// Метод из имеющегося массива строк формирует массив строк, длина которых меньше либо равнa 3 символа.
+string[] Solution(string[] arr)
+{
+    string[] arrNew = new string[0];
+
+    for (int i = 0; i < arr.Length; i++)
+    {
+        if (string.IsNullOrEmpty(arr[i]))
+            continue;
+        if (arr[i].Length - 1 < countChar) arrNew = AddToArray(arrNew, arr[i]);
+
+    }
+    return arrNew;
+}
+
 // ___________ Тело программы ______________
