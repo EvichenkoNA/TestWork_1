@@ -32,4 +32,17 @@ void PrintArray(string[] arr)
     Console.WriteLine("]");
 }
 
+// Метод добавляет строку в массив
+string[] AddToArray(string[] arr, string item)
+{
+    if (arr.Length == 0)
+    {
+        return new string[] { item };
+    }
+    string[] arrResult = new string[arr.Length + 1];
+    arr.CopyTo(arrResult, 0);
+    arrResult[arr.Length] = item;
+    return arrResult;
+}
+
 // ___________ Тело программы ______________
