@@ -17,4 +17,19 @@ void PrintData(string res)
     Console.WriteLine(res);
 }
 
+// Метод печатает массив
+void PrintArray(string[] arr)
+{
+    Console.Write("[");
+    if (arr.Any())
+    {
+        for (int i = 0; i < arr.Length - 1; i++)
+        {
+            Console.Write(arr[i] + ", ");
+        }
+        Console.Write(arr[arr.Length - 1]);
+    }
+    Console.WriteLine("]");
+}
+
 // ___________ Тело программы ______________
