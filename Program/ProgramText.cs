@@ -42,16 +42,19 @@ void PrintArray(string[] arr)
 }
 
 // Метод добавляет строку в массив
-string[] AddToArray(string[] arr, string item)
+
+//Метод AddToArray на вход получает массив и элемент, который необходимо добавить в этот массив, возвращает массив.
+
+string[] AddToArray(string[] arr, string item)   //Метод AddToArray на вход получает массив и элемент, который необходимо добавить в этот массив, возвращает массив.
 {
-    if (arr.Length == 0)
+    if (arr.Length == 0) // Если исходный массив пуст, то создаем новый массив длиной 1, добавляем заданный элемент
     {
         return new string[] { item };
     }
-    string[] arrResult = new string[arr.Length + 1];
-    arr.CopyTo(arrResult, 0);
-    arrResult[arr.Length] = item;
-    return arrResult;
+    string[] arrResult = new string[arr.Length + 1]; //Создаем новый массив длиной на 1 больше, чем исходный
+    arr.CopyTo(arrResult, 0); //Копируем в новый массив все элементы исходного массива
+    arrResult[arr.Length] = item; //На последнюю позицию в новом массиве добавляем необходимый элемент
+    return arrResult; //Возвращаем полученный массив
 }
 
 // Метод из имеющегося массива строк формирует массив строк, длина которых меньше либо равнa 3 символа.
