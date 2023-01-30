@@ -64,9 +64,9 @@ string[] SelectiveExtraction(string[] arr)
 
     for (int i = 0; i < arr.Length; i++)
     {
-        if (string.IsNullOrEmpty(arr[i])) // Проверка, является ли значение null или пустым
+        if (string.IsNullOrEmpty(arr[i])) // Проверка, является ли значение нулевой или пустой
             continue;
-        if (arr[i].Length - 1 < countChar) arrNew = AddToArray(arrNew, arr[i]);
+        if (arr[i].Length - 1 < countChar) arrNew = AddToArray(arrNew, arr[i]); //Если длина подстроки < 3, добавляем данную подстроку в новый массив
 
     }
     return arrNew;
